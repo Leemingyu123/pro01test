@@ -1,4 +1,4 @@
-package org.gasan.ctrl;
+package org.gasan.ctrl.notice;
 
 import java.io.IOException;
 
@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.gasan.dao.NoticeDAO;
 import org.gasan.dto.Notice;
 
-@WebServlet("/GetNotice.do")
-public class GetNoticeCtrl extends HttpServlet {
+@WebServlet("/GetNotice2.do")
+public class GetNoticeCtrl2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public GetNoticeCtrl() {
+    public GetNoticeCtrl2() {
         super();
     }
 
@@ -28,7 +28,7 @@ public class GetNoticeCtrl extends HttpServlet {
 		int no = Integer.parseInt(request.getParameter("no"));
 		
 		NoticeDAO dao = new NoticeDAO();
-		Notice noti = dao.getNotice(no);
+		Notice noti = dao.getNotice2(no);
 		
 		request.setAttribute("noti", noti);
 		RequestDispatcher view = request.getRequestDispatcher("/notice/getNotice.jsp");

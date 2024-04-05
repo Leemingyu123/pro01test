@@ -1,4 +1,4 @@
-package org.gasan.ctrl;
+package org.gasan.ctrl.notice;
 
 import java.io.IOException;
 
