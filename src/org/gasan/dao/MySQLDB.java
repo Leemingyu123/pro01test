@@ -5,13 +5,13 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-//Oracle용
-public class OracleDB implements SqlLang {
-	final static String DRIVER = "oracle.jdbc.OracleDriver";
-	final static String URL = "jdbc:oracle:thin:@localhost:1521:xe"; 
-	final static String USERID = "system";
+//MySQL용
+public class MySQLDB implements SqlLang {
+	final static String DRIVER = "org.mysql.cj.jdbc.Driver";
+	final static String URL = "jdbc:mysql://localhost:3306/kh"; 
+	final static String USERID = "root";
 	final static String USERPW = "1234";
-	final static String INS_NOTICE = "insert into notice values (nseq.nextval, ?, ?, sysdate, 0)";
+	final static String INS_NOTICE = "insert into notice values (default, ?, ?, default, 0)";
 	Connection con = null;
 	
 	@Override
